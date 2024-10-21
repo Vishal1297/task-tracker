@@ -1,55 +1,102 @@
 .input {
-    display: flex;
-    width: 90%;
-    position: relative;
-    align-items: center;
+  display: flex;
+  width: 90%;
+  position: relative;
+  align-items: center;
 }
 
 .input_box {
-    width: 100%;
-    border-radius: 50px;
-    padding: 20px 30px;
-    font-size: 25px;
-    border: none;
-    transition: 0.2s;
-    box-shadow: inset 0 0 5px black;
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px black;
 }
 
 .input_box:focus {
-    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
-    outline: none;
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
 }
 
 .input_submit {
-    font-family: 'Neucha', cursive;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin: 12px;
-    border-radius: 50px;
-    right: 0px;
-    border: none;
-    font-size: 15px;
-    background-color: #2eae34;
-    color: white;
-    transition: 0.2s all;
-    box-shadow: 0 0 10px black;
+  font-family: "Neucha", cursive;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  background-color: #2eae34;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
 }
 
 .input_submit:hover {
-    background-color: #fff;
-    color: #2eae34;
-    transform: scale(1.2);
+  background-color: #fff;
+  color: #2eae34;
+  transform: scale(1.2);
 }
 
 .input_submit:active {
-    transform: scale(0.8);
-    box-shadow: 0 0 5px black;
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
 }
 
-.todos {
-    display: flex;
-    justify-content: space-evenly;
+.tasks {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.task_item {
+  display: flex;
+  width: 28%;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: 0.2s;
+}
+
+.task_item_text {
+  flex: 1;
+  border: none;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.task_item_text:focus {
+  outline: none;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .input_box {
+    width: 80%;
+  }
+
+  .tasks {
     width: 90%;
-    flex-wrap: wrap;
+  }
+
+  .task_item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .task_item {
+    width: 50%;
+  }
 }

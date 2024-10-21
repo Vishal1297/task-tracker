@@ -1,27 +1,25 @@
-import { Task } from "../model"
-import TaskItem from "./TaskItem"
-
+import { Task } from "../model";
+import TaskItem from "./TaskItem";
 
 interface Props {
-    tasks: Task[]
-    setTasks: React.Dispatch<React.SetStateAction<Task[]>>
+  tasks: Task[];
+  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
+const TaskList = ({ tasks, setTasks }: Props) => {
+  return (
+    <div className="tasks">
+      {tasks.map((task) => (
+        <TaskItem
+          task={task.task}
+          id={task.id}
+          key={task.id}
+          isDone={task.isDone}
+          setTasks={setTasks}
+        />
+      ))}
+    </div>
+  );
+};
 
-const TaskList = ({tasks, setTasks}: Props) => {
-    return (
-        <div className='tasks'>
-            {tasks.map((task) => (
-                <TaskItem
-                    task={task.todo}
-                    id={task.id}
-                    key={task.id}
-                    isDone={task.isDone}
-                    setTasks={setTasks}
-                />
-            ))}
-        </div>
-    )
-}
-
-export default TaskList
+export default TaskList;
