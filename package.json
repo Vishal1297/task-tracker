@@ -5,6 +5,7 @@
   "homepage": "https://vishal1297.github.io/task-tracker",
   "description": "Task Tracker is a simple task management application that allows users to create, read, update and delete tasks.",
   "author": "Vishal",
+  "license": "Apache-2.0",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.17.0",

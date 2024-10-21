@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import "./App.css";
 import InputField from "./components/InputField";
 import TaskList from "./components/TaskList";
@@ -18,6 +18,11 @@ const App: React.FC = () => {
       setTask("");
     }
   };
+
+  // Set document title to "Task Tracker"
+  useLayoutEffect(() => {
+    document.title = "Task Tracker";
+  }, []);
 
   return (
     <div className="App">
